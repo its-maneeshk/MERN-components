@@ -1,0 +1,54 @@
+/myapp
+├── /backend
+│   ├── /config
+│   │   └── db.js         # MongoDB connection
+│   ├── /controllers
+│   │   └── userController.js   # Business logic
+│   ├── /models
+│   │   └── User.js       # Mongoose models
+│   ├── /routes
+│   │   └── userRoutes.js # API endpoints
+│   ├── /middleware
+│   │   ├── authMiddleware.js   # Authentication middleware
+│   │   └── errorMiddleware.js  # Error handling middleware
+│   ├── /utils
+│   │   └── generateToken.js    # JWT token generator
+│   ├── /validators
+│   │   └── userValidator.js    # Request data validation
+│   ├── /public
+│   │   └── /uploads            # Static files
+│   ├── server.js         # Main backend entry point
+│   └── .env              # Environment variables
+│
+├── /frontend
+│   ├── /public
+│   │   ├── index.html    # Main HTML file
+│   │   └── favicon.ico   # Favicon
+│   ├── /src
+│   │   ├── /components
+│   │   │   └── Header.js
+│   │   ├── /pages
+│   │   │   ├── Home.js
+│   │   │   └── Login.js
+│   │   ├── /context
+│   │   │   └── AuthContext.js
+│   │   ├── /redux
+│   │   │   ├── /actions
+│   │   │   │   └── userActions.js
+│   │   │   ├── /reducers
+│   │   │   │   └── userReducer.js
+│   │   │   └── store.js
+│   │   ├── /services
+│   │   │   └── api.js     # API calls
+│   │   ├── /styles
+│   │   │   └── styles.css # Global CSS
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── reportWebVitals.js
+│   └── package.json
+│
+├── /node_modules
+├── /uploads              # Public folder for file uploads
+├── .gitignore            # Git ignore file
+├── package.json          # Main package.json for backend
+└── README.md             # Project documentation
