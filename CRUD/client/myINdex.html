@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .product { border: 1px solid burlywood; padding: 8px; margin: 5px; width: 15rem;}
+  </style>
+</head>
+<body>
+  <h1>Product List</h1>
+  <div id="products"></div>
+
+  <script>
+    async function fetchProducts() {
+      const res = await fetch('http://localhost:4040/api/products');
+      const data = await res.json();
+      const productDiv = document.getElementById('products');
+
+      data.forEach(product => {
+        productDiv.innerHTML += `
+          <div class="product">
+            <h3>${product.name}</h3>
+            <p>Price: $${product.price}</p>
+            <p>${product.description || 'No description'}</p>
+          </div>`;
+      });
+    }
+
+    fetchProducts();
+  </script>
+</body>
+</html>
